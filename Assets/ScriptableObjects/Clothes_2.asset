@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce601db36fbbb34187101e5be78fdab, type: 3}
   m_Name: Clothes_2
   m_EditorClassIdentifier: 
-  bodyPartName: Suit
+  bodyPartName: Cloak 2
   bodyPartAnimationID: 2
   allBodyPartAnimations:
   - {fileID: 7400000, guid: fe884e87a17a8a8469022eb4f79fa3b3, type: 2}

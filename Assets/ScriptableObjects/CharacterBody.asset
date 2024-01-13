@@ -16,6 +16,6 @@ MonoBehaviour:
   - bodyPartName: Body
     bodyPart: {fileID: 11400000, guid: 7926cc00235130c478f291c633a8b3a5, type: 2}
   - bodyPartName: Clothes
-    bodyPart: {fileID: 11400000, guid: d3741dd786cc1d940b9122ea9d721d9e, type: 2}
+    bodyPart: {fileID: 11400000, guid: 5933bf20fe773784296b6bcea498aad3, type: 2}
   - bodyPartName: Hair
     bodyPart: {fileID: 11400000, guid: 8c77227476e9b7348a97215bb05bf6f9, type: 2}

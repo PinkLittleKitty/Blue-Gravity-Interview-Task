@@ -14,4 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bodyPartName: Hair_0
   bodyPartAnimationID: 0
-  allBodyPartAnimations: []
+  allBodyPartAnimations:
+  - {fileID: 7400000, guid: 0f1b28f345c19be46b07b21c79ca8872, type: 2}
+  - {fileID: 7400000, guid: ab5794f41178f544e88adebee5016150, type: 2}
+  - {fileID: 7400000, guid: 2ca2aca7a9fd9ba4f8abfaa50413948f, type: 2}
+  - {fileID: 7400000, guid: 7afb98a52373d34478de3fa4691ea14a, type: 2}
+  - {fileID: 7400000, guid: 7c25b50104bf0ad458836c6be3f9a276, type: 2}
+  - {fileID: 7400000, guid: 1f5ef2d54ea9b494f943fc29e155060e, type: 2}
+  - {fileID: 7400000, guid: f150b49f9f02ad2469f0a6eaff7d6ec1, type: 2}
+  - {fileID: 7400000, guid: 0842022b5ebd7af46b5eb4f12cf32780, type: 2}
