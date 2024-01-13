@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1890716538, guid: a1896107ec02ebc4e8a8a54f1ac44756, type: 3}
+  m_Sprite: {fileID: 1888985735, guid: 34b591b0b48a54849bd6b33b5854af2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -388,6 +388,7 @@ GameObject:
   - component: {fileID: 1233695617}
   - component: {fileID: 1233695619}
   - component: {fileID: 1233695620}
+  - component: {fileID: 1233695621}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -485,6 +486,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1233695621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233695614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 032137b1993c19242a5c52b228720d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterBody: {fileID: 0}
+  bodyPartTypes:
+  - Body
+  - Clothes
+  - Hair
+  characterStates:
+  - Idle
+  - Walk
+  characterDirections:
+  - Down
+  - Right
+  - Left
+  - Up
+  animator: {fileID: 1233695620}
 --- !u!1 &1494978738
 GameObject:
   m_ObjectHideFlags: 0

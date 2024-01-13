@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce601db36fbbb34187101e5be78fdab, type: 3}
+  m_Name: Clothes_1
+  m_EditorClassIdentifier: 
+  bodyPartName: Cloak
+  bodyPartAnimationID: 1
+  allBodyPartAnimations:
+  - {fileID: 7400000, guid: 8bad5acc5dad66e458a5407729ad09f5, type: 2}
+  - {fileID: 7400000, guid: 09ea11115f504e84d83727f74e68e56f, type: 2}
+  - {fileID: 7400000, guid: 50ea68ef0fc4e4d4e93654dfc9a39b36, type: 2}
+  - {fileID: 7400000, guid: c24dd629736b94e41b3593a18b3c0660, type: 2}
+  - {fileID: 7400000, guid: 59afb43d3e641c647a67d7737f0093d9, type: 2}
+  - {fileID: 7400000, guid: b7d016f8e05f6ea4c9201f1282f1b51f, type: 2}
+  - {fileID: 7400000, guid: 18b9dcd8c00079148a19704a132dbdf8, type: 2}
+  - {fileID: 7400000, guid: d72e3cfba2ecb49419685d9daaaae8e0, type: 2}
