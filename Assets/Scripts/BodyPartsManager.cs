@@ -24,6 +24,8 @@ public class BodyPartsManager : MonoBehaviour
 
         defaultAnimationClips = new AnimationClipOverrides(animatorOverrideController.overridesCount);
         animatorOverrideController.GetOverrides(defaultAnimationClips);
+        
+        UpdateBodyParts();
     }
 
     public void UpdateBodyParts()
@@ -42,7 +44,6 @@ public class BodyPartsManager : MonoBehaviour
                     string direction = characterDirections[directionIndex];
                     // The naming convention is: "[Type]_[Index]_[state]_[direction]" (Ex. Body_0_Idle_Down)
                     animationClip = Resources.Load<AnimationClip>("Animations/" + "Player/" + partType + "/" + partType + "_" + partID + "_" + state + "_" + direction);
-
                     defaultAnimationClips[partType + "_" + 0 + "_" + state + "_" + direction] = animationClip;
                 }
             }

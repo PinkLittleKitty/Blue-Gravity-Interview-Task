@@ -463,9 +463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f67de2a34fbb2f438e246d3f069e5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 3
   playerMovement: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 1233695620}
 --- !u!95 &1233695620
 Animator:
   serializedVersion: 4
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032137b1993c19242a5c52b228720d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterBody: {fileID: 0}
+  characterBody: {fileID: 11400000, guid: b69c6b3002de364439b15a388a7972d8, type: 2}
   bodyPartTypes:
   - Body
   - Clothes
