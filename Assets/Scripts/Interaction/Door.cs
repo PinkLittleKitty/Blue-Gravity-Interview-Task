@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    public GameObject _prompt;
     private Animator animator;
-    public GameObject InteractionPrompt => _prompt;
 
     void Awake()
     {
