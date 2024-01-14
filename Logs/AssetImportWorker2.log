@@ -1563,3 +1563,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 969.347014 seconds.
+  path: Assets/ScriptableObjects/CharacterBody.asset
+  artifactKey: Guid(b69c6b3002de364439b15a388a7972d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/CharacterBody.asset using Guid(b69c6b3002de364439b15a388a7972d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abd876f801dab836ed9e115a264f1dc9') in 0.039890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.674650 seconds.
+  path: Assets/Scripts/BodyPartsManager.cs
+  artifactKey: Guid(032137b1993c19242a5c52b228720d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/BodyPartsManager.cs using Guid(032137b1993c19242a5c52b228720d60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a094ce9e9d2f07ac3edfff88937f80e') in 0.006559 seconds 
