@@ -24,7 +24,17 @@ public class InputManager : MonoBehaviour
     private void Start()
     {
         playerInput = new PlayerControls();
+        EnableMovement();
+    }
+
+    public void EnableMovement()
+    {
         playerInput.Movement.Enable();
+    }
+
+    public void DisableMovement()
+    {
+        playerInput.Movement.Disable();
     }
     
     private void FixedUpdate()
