@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -6,55 +7,78 @@ public class BodyPartsSelector : MonoBehaviour
     [SerializeField] private CharacterBodySO characterBody;
     [SerializeField] private BodyPartSelection[] bodyPartSelections;
 
+    private int currentBody;
+    private int currentClothes;
+    private int currentHair;
+
     private void Start()
     {
         for (int i = 0; i < bodyPartSelections.Length; i++)
         {
-            GetCurrentBodyParts(i);
+            GetCurrentBodyPartsNamesAndAnims(i);
         }
     }
 
+    public void CopyCurrentBodyParts()
+    {
+        currentBody =  GetCurrentBodyPartsIndex(0);
+        currentClothes = GetCurrentBodyPartsIndex(1);
+        currentHair = GetCurrentBodyPartsIndex(2);;
+    }
+
+    public void CancelBodyPartsUpdate()
+    {
+        characterBody.characterBodyParts[0].bodyPart = bodyPartSelections[0].bodyPartOptions[currentBody];
+        characterBody.characterBodyParts[1].bodyPart = bodyPartSelections[1].bodyPartOptions[currentClothes];
+        characterBody.characterBodyParts[2].bodyPart = bodyPartSelections[2].bodyPartOptions[currentHair];
+    }
+
+    private int GetCurrentBodyPartsIndex(int partIndex)
+    {
+        return bodyPartSelections[partIndex].bodyPartCurrentIndex;
+    }
+
+
     public void NextBodyPart(int partIndex)
     {
-        if (!ValidateIndexValue(partIndex)) return;
-        
+        int initialBodyPartIndex = bodyPartSelections[partIndex].bodyPartCurrentIndex;
+        int totalBodyParts = bodyPartSelections[partIndex].bodyPartOptions.Length;
+        int nextBodyPartIndex = initialBodyPartIndex;
 
-        // TODO: Abstract this bool to make it more readable.
-        if (bodyPartSelections[partIndex].bodyPartCurrentIndex < bodyPartSelections[partIndex].bodyPartOptions.Length - 1)
+        do
         {
-            bodyPartSelections[partIndex].bodyPartCurrentIndex++;
+            nextBodyPartIndex = (nextBodyPartIndex + 1) % totalBodyParts;
         }
-        else
-        {
-            bodyPartSelections[partIndex].bodyPartCurrentIndex = 0;
-        }
+        while (bodyPartSelections[partIndex].bodyPartOptions[nextBodyPartIndex].Bought == false && nextBodyPartIndex != initialBodyPartIndex);
 
-        UpdateCurrentPart(partIndex);
+        if (nextBodyPartIndex != initialBodyPartIndex)
+        {
+            bodyPartSelections[partIndex].bodyPartCurrentIndex = nextBodyPartIndex;
+            UpdateCurrentPart(partIndex);
+        }
     }
 
     public void PreviousBody(int partIndex)
     {
-        if (!ValidateIndexValue(partIndex)) return;
-     
-        // TODO: Change this to a try-catch.
-        if (bodyPartSelections[partIndex].bodyPartCurrentIndex > 0)
-        {
-            bodyPartSelections[partIndex].bodyPartCurrentIndex--;
-        }
-        else
-        {
-            bodyPartSelections[partIndex].bodyPartCurrentIndex = bodyPartSelections[partIndex].bodyPartOptions.Length - 1;
-        }
+        int initialBodyPartIndex = bodyPartSelections[partIndex].bodyPartCurrentIndex;
+        int totalBodyParts = bodyPartSelections[partIndex].bodyPartOptions.Length;
+        int nextBodyPartIndex = initialBodyPartIndex;
 
-        UpdateCurrentPart(partIndex);
+        do
+        {
+            nextBodyPartIndex = (nextBodyPartIndex + totalBodyParts - 1) % totalBodyParts;
+        }
+        while (bodyPartSelections[partIndex].bodyPartOptions[nextBodyPartIndex].Bought == false && nextBodyPartIndex != initialBodyPartIndex);
+
+        if (nextBodyPartIndex != initialBodyPartIndex)
+        {
+            bodyPartSelections[partIndex].bodyPartCurrentIndex = nextBodyPartIndex;
+            UpdateCurrentPart(partIndex);
+        }
     }
 
-    private bool ValidateIndexValue(int partIndex)
-    {
-        return !(partIndex > bodyPartSelections.Length || partIndex < 0);
-    }
 
-    private void GetCurrentBodyParts(int partIndex)
+    private void GetCurrentBodyPartsNamesAndAnims(int partIndex)
     {
         bodyPartSelections[partIndex].bodyPartNameTextComponent.text = characterBody.characterBodyParts[partIndex].bodyPart.bodyPartName;
         bodyPartSelections[partIndex].bodyPartCurrentIndex = characterBody.characterBodyParts[partIndex].bodyPart.bodyPartAnimationID;
@@ -64,6 +88,17 @@ public class BodyPartsSelector : MonoBehaviour
     {
         bodyPartSelections[partIndex].bodyPartNameTextComponent.text = bodyPartSelections[partIndex].bodyPartOptions[bodyPartSelections[partIndex].bodyPartCurrentIndex].bodyPartName;
         characterBody.characterBodyParts[partIndex].bodyPart = bodyPartSelections[partIndex].bodyPartOptions[bodyPartSelections[partIndex].bodyPartCurrentIndex];
+    }
+
+    private void Update()
+    {
+        if (Player.instance.interacting == true && InputManager.instance.playerInput.Movement.Interaction.WasPressedThisFrame())
+        {
+            Player.instance.interacting = false;
+            CancelBodyPartsUpdate();
+            this.transform.parent.gameObject.SetActive(false);
+            InputManager.instance.EnableMovement();
+        }
     }
 }
 

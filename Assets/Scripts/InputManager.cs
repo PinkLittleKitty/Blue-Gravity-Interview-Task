@@ -29,12 +29,12 @@ public class InputManager : MonoBehaviour
 
     public void EnableMovement()
     {
-        playerInput.Movement.Enable();
+        playerInput.Movement.Movement.Enable();
     }
 
     public void DisableMovement()
     {
-        playerInput.Movement.Disable();
+        playerInput.Movement.Movement.Disable();
     }
     
     private void FixedUpdate()

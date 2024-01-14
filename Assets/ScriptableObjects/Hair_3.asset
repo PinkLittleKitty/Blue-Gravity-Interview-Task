@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce601db36fbbb34187101e5be78fdab, type: 3}
+  m_Name: Hair_3
+  m_EditorClassIdentifier: 
+  bodyPartName: Hair_3
+  ShopID: 4
+  bodyPartAnimationID: 3
+  allBodyPartAnimations:
+  - {fileID: 7400000, guid: c2ac69d9c14adf440ae6cb9e3eecc0be, type: 2}
+  - {fileID: 7400000, guid: 6fff10a4190365f4f8469ac30fb1abb8, type: 2}
+  - {fileID: 7400000, guid: 648c0e2093c1a6e42bda2e7128b640c0, type: 2}
+  - {fileID: 7400000, guid: 00cface3771bc284b997d45924208c75, type: 2}
+  - {fileID: 7400000, guid: cb72a407ef274124e8f53a7dc4cc3a83, type: 2}
+  - {fileID: 7400000, guid: 06b43ce60effa0b44ab03f2003e00c80, type: 2}
+  - {fileID: 7400000, guid: 67ed2826da137d64192051ab5ac1dc98, type: 2}
+  - {fileID: 7400000, guid: b3e33149fede26b4e8e36c8860f791a8, type: 2}
+  Bought: 0

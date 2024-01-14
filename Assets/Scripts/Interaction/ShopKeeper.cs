@@ -11,6 +11,7 @@ public class ShopKeeper : MonoBehaviour, IInteractable
     {
         shopKeeperMenu.SetActive(true);
         InputManager.instance.DisableMovement();
+        Player.instance.interacting =  true;
         interactSuccessful = true;
     }
 }

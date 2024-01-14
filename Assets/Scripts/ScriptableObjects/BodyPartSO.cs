@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +5,8 @@ using UnityEngine;
 public class BodyPartSO : ScriptableObject
 {
     public string bodyPartName;
+    public int ShopID;
     public int bodyPartAnimationID;
     public List<AnimationClip> allBodyPartAnimations = new List<AnimationClip>();
+    public bool Bought;
 }

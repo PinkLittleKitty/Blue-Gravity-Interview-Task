@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BodyPartsManager : MonoBehaviour
 {
+    public static BodyPartsManager instance {get; private set;}
     [SerializeField] private CharacterBodySO characterBody;
 
     [Header("String arrays")]
@@ -16,6 +17,13 @@ public class BodyPartsManager : MonoBehaviour
     private AnimatorOverrideController animatorOverrideController; 
     private AnimationClipOverrides defaultAnimationClips;
 
+    void Awake()
+    {
+        if (instance == null || instance != this)
+        {
+            instance = this;
+        }
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();

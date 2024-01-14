@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Clothes_0
   m_EditorClassIdentifier: 
   bodyPartName: Boxers
+  ShopID: 0
   bodyPartAnimationID: 0
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 5b6a968d49828694da26f9f9c061a928, type: 2}
@@ -23,3 +24,5 @@ MonoBehaviour:
   - {fileID: 7400000, guid: f8aa4e3af8873fd4a94c73f8409516fa, type: 2}
   - {fileID: 7400000, guid: 0334807447f99f54f9310f51fc3728e5, type: 2}
   - {fileID: 7400000, guid: 61c52f7b0c8e0da479247af51ea333e1, type: 2}
+  Bought: 1
+  type: 1

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Clothes_1
   m_EditorClassIdentifier: 
   bodyPartName: Cloak 1
+  ShopID: 2
   bodyPartAnimationID: 1
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 8bad5acc5dad66e458a5407729ad09f5, type: 2}
@@ -23,3 +24,4 @@ MonoBehaviour:
   - {fileID: 7400000, guid: b7d016f8e05f6ea4c9201f1282f1b51f, type: 2}
   - {fileID: 7400000, guid: 18b9dcd8c00079148a19704a132dbdf8, type: 2}
   - {fileID: 7400000, guid: d72e3cfba2ecb49419685d9daaaae8e0, type: 2}
+  Bought: 0

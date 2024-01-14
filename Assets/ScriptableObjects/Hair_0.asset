@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Hair_0
   m_EditorClassIdentifier: 
   bodyPartName: Hair_0
+  ShopID: 0
+  Bought: 1
   bodyPartAnimationID: 0
   allBodyPartAnimations:
   - {fileID: 7400000, guid: 0f1b28f345c19be46b07b21c79ca8872, type: 2}

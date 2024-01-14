@@ -9,6 +9,8 @@ public class Wardrobe : MonoBehaviour, IInteractable
 
     public void OnInteract(Interactor interactor, out bool interactSuccessful)
     {
+        Player.instance.interacting = true;
+        wardrobeMenu.GetComponentInChildren<BodyPartsSelector>().CopyCurrentBodyParts();
         wardrobeMenu.SetActive(true);
         InputManager.instance.DisableMovement();
         interactSuccessful = true;

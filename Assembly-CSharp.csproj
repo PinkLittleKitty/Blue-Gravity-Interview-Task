@@ -76,8 +76,11 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Interaction\IInteractable.cs" />
-    <Compile Include="Assets\ShopkeeperMenu.cs" />
     <Compile Include="Assets\Scripts\Interaction\InteractionPromptUI.cs" />
+    <Compile Include="Assets\Scripts\ButtonInfo.cs" />
+    <Compile Include="Assets\Scripts\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction\WardrobeMenu.cs" />
+    <Compile Include="Assets\Scripts\Interaction\AppleTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -91,7 +94,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
-    <None Include="Assets\Resources\UI-Sprites\yellowSheet.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />

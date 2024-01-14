@@ -1,20 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance { get; private set; }
+
     [Header("Movement")]
     [SerializeField] private float _speed = 5f;
 
     [SerializeField] private int money;
+    [SerializeField] private int apple;
+    public int Money => money;
+    public int Apple => apple;
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI appleText;
 
     private Rigidbody2D _rigidbody => GetComponent<Rigidbody2D>();
 
     private Animator animator => GetComponent<Animator>();
 
-    public static Player instance { get; private set; }
+    public bool interacting;
 
 
     private void Awake()
@@ -38,6 +44,20 @@ public class Player : MonoBehaviour
     public void GiveMoney(int value)
     {
         money += value;
+        moneyText.text = money.ToString();
+    }
+
+    public void GiveApple(int value)
+    {
+        apple += value;
+        appleText.text = apple.ToString();
+    }
+
+    public void SellApples()
+    {
+        GiveMoney(apple * 10);
+        apple = 0;
+        appleText.text = apple.ToString();
     }
 
 

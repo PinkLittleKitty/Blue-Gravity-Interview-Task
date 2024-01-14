@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ce601db36fbbb34187101e5be78fdab, type: 3}
-  m_Name: Body
+  m_Name: Body_0
   m_EditorClassIdentifier: 
-  bodyPartName: Body
+  bodyPartName: Body_0
+  ShopID: 0
   bodyPartAnimationID: 0
   allBodyPartAnimations:
   - {fileID: 7400000, guid: c9fe899b140d5c44a867a597564da9d6, type: 2}
@@ -23,3 +24,5 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 0166943ab309ebc45b23c6f6e4ef2527, type: 2}
   - {fileID: 7400000, guid: dda3006c3b87d8a418d1366202af3710, type: 2}
   - {fileID: 7400000, guid: 46989697d9479ee408e5db7a8d0c71b4, type: 2}
+  Bought: 1
+  type: 0
