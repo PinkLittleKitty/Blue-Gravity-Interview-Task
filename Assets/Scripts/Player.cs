@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float _speed = 5f;
 
+    [SerializeField] private int money;
+
     private Rigidbody2D _rigidbody => GetComponent<Rigidbody2D>();
 
     private Animator animator => GetComponent<Animator>();
@@ -31,6 +33,11 @@ public class Player : MonoBehaviour
         animator.SetFloat("moveX", playerMovement.x);
         animator.SetFloat("moveY", playerMovement.y);
         animator.SetBool("moving", true);
+    }
+
+    public void GiveMoney(int value)
+    {
+        money += value;
     }
 
 

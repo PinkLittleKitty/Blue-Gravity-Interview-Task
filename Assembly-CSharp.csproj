@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\Interaction\ShopKeeper.cs" />
     <Compile Include="Assets\Scripts\RotatePlayer.cs" />
     <Compile Include="Assets\ShopkeeperMenu.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Chest.cs" />
+    <Compile Include="Assets\Scripts\Interaction\Wardrobe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
