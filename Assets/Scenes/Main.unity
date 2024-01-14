@@ -2585,7 +2585,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1976456410, guid: df6c7b2496fd33f4aa3d6993978f208b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5924,6 +5924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad61010a19b851847acbad767e83dfe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sellAppleText: {fileID: 1236617255}
 --- !u!1 &1032413529
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,6 +6169,7 @@ GameObject:
   - component: {fileID: 1132038733}
   - component: {fileID: 1132038735}
   - component: {fileID: 1132038734}
+  - component: {fileID: 1132038736}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6292,6 +6294,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132038732}
   m_CullTransparentMesh: 1
+--- !u!114 &1132038736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132038732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b884bb1891b9a4a88fa274c409939f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 1132038734}
+  CountFPS: 30
+  Duration: 1
+  NumberFormat: N0
 --- !u!1 &1233695614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6801,6 +6819,7 @@ GameObject:
   - component: {fileID: 1263056331}
   - component: {fileID: 1263056333}
   - component: {fileID: 1263056332}
+  - component: {fileID: 1263056334}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6925,6 +6944,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263056330}
   m_CullTransparentMesh: 1
+--- !u!114 &1263056334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263056330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01b884bb1891b9a4a88fa274c409939f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 1263056332}
+  CountFPS: 30
+  Duration: 1
+  NumberFormat: N0
 --- !u!1 &1284155138
 GameObject:
   m_ObjectHideFlags: 0

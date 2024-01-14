@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    
+    public TextMeshProUGUI sellAppleText;
     public int[,] shopItems = new int[5, 5];
 
     void Start()
@@ -27,6 +28,11 @@ public class ShopManager : MonoBehaviour
         shopItems[3,4] = 0;
     }
 
+    public void UpdateAppleSellText()
+    {
+        sellAppleText.text = "Sell Apples (" + Player.instance.Apple * 10 + ")";
+    }
+
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
@@ -42,6 +48,7 @@ public class ShopManager : MonoBehaviour
 
     private void Update()
     {
+        UpdateAppleSellText();
         if (Player.instance.interacting == true && InputManager.instance.playerInput.Movement.Interaction.WasPressedThisFrame())
         {
             this.gameObject.SetActive(false);

@@ -44,17 +44,25 @@ public class Player : MonoBehaviour
     public void GiveMoney(int value)
     {
         money += value;
-        moneyText.text = money.ToString();
+        if (money != 0)
+        {
+            moneyText.GetComponent<NumberCounter>().UpdateText(money);
+        }
+        else
+        {
+            moneyText.text = money.ToString();
+        }
     }
 
     public void GiveApple(int value)
     {
         apple += value;
-        appleText.text = apple.ToString();
+        appleText.GetComponent<NumberCounter>().UpdateText(apple);
     }
 
     public void SellApples()
     {
+        if (apple <= 0) return;
         GiveMoney(apple * 10);
         apple = 0;
         appleText.text = apple.ToString();

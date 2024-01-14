@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Interaction\Interactor.cs" />
+    <Compile Include="Assets\Scripts\Interaction\InteractionPromptUI.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CharacterBodySO.cs" />
     <Compile Include="Assets\Scripts\Interaction\ShopKeeper.cs" />
     <Compile Include="Assets\Scripts\BodyPartsManager.cs" />
@@ -71,16 +72,16 @@
     <Compile Include="Assets\Scripts\Interaction\Door.cs" />
     <Compile Include="Assets\Scripts\RotatePlayer.cs" />
     <Compile Include="Assets\Scripts\BodyPartsSelector.cs" />
+    <Compile Include="Assets\Scripts\Interaction\WardrobeMenu.cs" />
+    <Compile Include="Assets\Scripts\ButtonInfo.cs" />
     <Compile Include="Assets\Scripts\Interaction\Chest.cs" />
+    <Compile Include="Assets\Scripts\Interaction\AppleTree.cs" />
+    <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\Interaction\Wardrobe.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Interaction\IInteractable.cs" />
-    <Compile Include="Assets\Scripts\Interaction\InteractionPromptUI.cs" />
-    <Compile Include="Assets\Scripts\ButtonInfo.cs" />
-    <Compile Include="Assets\Scripts\ShopManager.cs" />
-    <Compile Include="Assets\Scripts\Interaction\WardrobeMenu.cs" />
-    <Compile Include="Assets\Scripts\Interaction\AppleTree.cs" />
+    <Compile Include="Assets\Scripts\NumberCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

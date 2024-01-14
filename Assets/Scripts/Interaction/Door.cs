@@ -13,7 +13,13 @@ public class Door : MonoBehaviour, IInteractable
 
     public void OnInteract(Interactor interactor, out bool interactSuccessful)
     {
+
+        animator.SetBool("OpenDoor", true);
         interactSuccessful = true;
+    }
+
+    public void DestroyDoor()
+    {
         Destroy(gameObject);
     }
 }
