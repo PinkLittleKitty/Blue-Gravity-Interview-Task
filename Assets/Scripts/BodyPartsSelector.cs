@@ -18,49 +18,42 @@ public class BodyPartsSelector : MonoBehaviour
 
     public void NextBodyPart(int partIndex)
     {
-        if (ValidateIndexValue(partIndex))
-        {
-            if (bodyPartSelections[partIndex].bodyPartCurrentIndex < bodyPartSelections[partIndex].bodyPartOptions.Length - 1)
-            {
-                bodyPartSelections[partIndex].bodyPartCurrentIndex++;
-            }
-            else
-            {
-                bodyPartSelections[partIndex].bodyPartCurrentIndex = 0;
-            }
+        if (!ValidateIndexValue(partIndex)) return;
+        
 
-            UpdateCurrentPart(partIndex);
+        // TODO: Abstract this bool to make it more readable.
+        if (bodyPartSelections[partIndex].bodyPartCurrentIndex < bodyPartSelections[partIndex].bodyPartOptions.Length - 1)
+        {
+            bodyPartSelections[partIndex].bodyPartCurrentIndex++;
         }
+        else
+        {
+            bodyPartSelections[partIndex].bodyPartCurrentIndex = 0;
+        }
+
+        UpdateCurrentPart(partIndex);
     }
 
     public void PreviousBody(int partIndex)
     {
-        if (ValidateIndexValue(partIndex))
+        if (!ValidateIndexValue(partIndex)) return;
+     
+        // TODO: Change this to a try-catch.
+        if (bodyPartSelections[partIndex].bodyPartCurrentIndex > 0)
         {
-            if (bodyPartSelections[partIndex].bodyPartCurrentIndex > 0)
-            {
-                bodyPartSelections[partIndex].bodyPartCurrentIndex--;
-            }
-            else
-            {
-                bodyPartSelections[partIndex].bodyPartCurrentIndex = bodyPartSelections[partIndex].bodyPartOptions.Length - 1;
-            }
-
-            UpdateCurrentPart(partIndex);
+            bodyPartSelections[partIndex].bodyPartCurrentIndex--;
         }
+        else
+        {
+            bodyPartSelections[partIndex].bodyPartCurrentIndex = bodyPartSelections[partIndex].bodyPartOptions.Length - 1;
+        }
+
+        UpdateCurrentPart(partIndex);
     }
 
     private bool ValidateIndexValue(int partIndex)
     {
-        if (partIndex > bodyPartSelections.Length || partIndex < 0)
-        {
-            Debug.LogError("Invalid part index (Does not mach a body part)");
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return !(partIndex > bodyPartSelections.Length || partIndex < 0);
     }
 
     private void GetCurrentBodyParts(int partIndex)
