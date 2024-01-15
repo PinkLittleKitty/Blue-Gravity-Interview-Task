@@ -29,28 +29,22 @@ public class ShopManager : MonoBehaviour
         shopItems[3, 4] = 0;
     }
 
-    // Method to handle the buying of items in the shop
     public void Buy()
     {
-        // Get the reference to the currently selected button using EventSystem
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
         var ButtonRefInfo = ButtonRef.GetComponent<ButtonInfo>();
 
-        // Check if the player has enough money to buy the selected item
         if (Player.instance.Money >= shopItems[2, ButtonRefInfo.ItemID])
         {
-            // Deduct money from the player and mark the item as bought
             Player.instance.GiveMoney(-shopItems[2, ButtonRefInfo.ItemID]);
             ButtonRefInfo.bodyPartSO.Bought = true;
 
-            // Increase the quantity of the bought item in the shop
             shopItems[3, ButtonRefInfo.ItemID] += 1;
         }
     }
 
     private void Update()
     {
-        // Check for interaction and close the shop if needed
         if (Player.instance.interacting == true && InputManager.instance.playerInput.Movement.Interaction.WasPressedThisFrame())
         {
             this.gameObject.SetActive(false);
