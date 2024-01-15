@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class ShopKeeper : MonoBehaviour, IInteractable
 {
+    // Reference to the shopkeeper menu GameObject
     [SerializeField] private GameObject shopKeeperMenu;
-    public GameObject InteractionPrompt => throw new System.NotImplementedException();
 
+    // Implementation of the IInteractable interface method
     public void OnInteract(Interactor interactor, out bool interactSuccessful)
     {
+        // Activate the shopkeeper menu
         shopKeeperMenu.SetActive(true);
+
+        // Disable player movement
         InputManager.instance.DisableMovement();
-        Player.instance.interacting =  true;
+
+        // Set the player's interacting state to true
+        Player.instance.interacting = true;
+
+        // Set interactSuccessful to true since the interaction was successful
         interactSuccessful = true;
     }
 }

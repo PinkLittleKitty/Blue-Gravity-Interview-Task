@@ -7,8 +7,6 @@ public class InteractionPromptUI : MonoBehaviour
     [SerializeField] public GameObject _uiPanel;
     public bool IsDisplayed;
 
-
-
     public void SetUp()
     {
         _uiPanel.SetActive(true);
