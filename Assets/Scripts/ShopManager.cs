@@ -7,7 +7,6 @@ public class ShopManager : MonoBehaviour
     // 2D array to store shop item information (IDs, prices, quantities)
     public int[,] shopItems = new int[5, 5];
 
-
     void Start()
     {
         // Initialize shop item IDs
@@ -21,12 +20,6 @@ public class ShopManager : MonoBehaviour
         shopItems[2, 2] = 200;
         shopItems[2, 3] = 250;
         shopItems[2, 4] = 300;
-
-        // Initialize shop item quantities
-        shopItems[3, 1] = 0;
-        shopItems[3, 2] = 0;
-        shopItems[3, 3] = 0;
-        shopItems[3, 4] = 0;
     }
 
     public void Buy()
@@ -38,8 +31,6 @@ public class ShopManager : MonoBehaviour
         {
             Player.instance.GiveMoney(-shopItems[2, ButtonRefInfo.ItemID]);
             ButtonRefInfo.bodyPartSO.Bought = true;
-
-            shopItems[3, ButtonRefInfo.ItemID] += 1;
         }
     }
 

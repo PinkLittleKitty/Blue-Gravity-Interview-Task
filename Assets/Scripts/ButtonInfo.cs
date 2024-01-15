@@ -16,14 +16,11 @@ public class ButtonInfo : MonoBehaviour
 
     public GameObject shopManager;
 
-    private void Start()
-    {
-        priceText.text = "Price: " + shopManager.GetComponent<ShopManager>().shopItems[2, ItemID].ToString();
-    }
 
     void Update()
     {
-        if (shopManager.GetComponent<ShopManager>().shopItems[3, ItemID] == 1 || bodyPartSO.Bought == true)
+        priceText.text = "Price: " + shopManager.GetComponent<ShopManager>().shopItems[2, ItemID].ToString();
+        if (bodyPartSO.Bought == true)
         {
             this.gameObject.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
             this.gameObject.GetComponent<Button>().interactable = false;
